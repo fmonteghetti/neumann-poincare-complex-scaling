@@ -1,0 +1,31 @@
+#######################################
+# Plot style
+# --
+# This style only contains size-independent
+# settings.
+#######################################
+# -- Size-independent settings
+    # Times-like font for math and text
+mathtext.fontset: stix
+font.family: STIXGeneral
+    # Relative text size
+figure.titlesize: medium
+axes.titlesize: medium
+legend.fontsize: medium
+figure.labelsize: medium
+axes.labelsize: medium
+xtick.labelsize: medium 
+ytick.labelsize: medium
+    # Ticks inside the axes 
+xtick.direction: in
+ytick.direction: in
+    # Legend with rectangular edge frame
+legend.framealpha: 1.0
+legend.edgecolor: inherit
+legend.fancybox: False
+    # Antialiasing
+#lines.antialiased : True
+#patch.antialiased : True
+#text.antialiased : True
+    # Use smallest bounding box at export
+savefig.bbox: tight

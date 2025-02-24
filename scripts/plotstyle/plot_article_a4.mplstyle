@@ -1,0 +1,36 @@
+#######################################
+# A4 paper size
+# --
+# This style only contains size-dependent settings,
+# suited to A4 paper. To size a plot, use the provided
+# `figure.figsize` as follows:
+# [paperwidth,paperheight] = matplotlib.rcParams['figure.figsize']
+# f, axs = plt.subplots(figsize=(0.42*paperwidth,0.18*paperheight))
+#######################################
+font.size: 8
+    # Paper size (width, height) in inches
+figure.figsize: 8.3, 11.7
+    # Lines and marker in plots (pt)
+lines.linewidth : 0.6
+lines.markeredgewidth: 0.6
+lines.markersize: 3.0
+    # Thickness of axes lines (pt)
+axes.linewidth: 0.3
+    # Thickness of all patches, including legend box edge (pt)
+patch.linewidth: 0.3
+    # Thickness of grid lines and ticks (pt)
+grid.linewidth : 0.3
+xtick.major.width: 0.3
+xtick.minor.width: 0.3
+ytick.major.width: 0.3
+ytick.minor.width: 0.3
+    # Legend column spacing (pt)
+legend.borderpad: 0.4
+legend.labelspacing: 0.4
+legend.columnspacing: 0.4
+legend.handletextpad: 0.4
+# -- Export settings
+savefig.dpi : 300
+savefig.format: pdf
+    # Minimal margin that do not trim axes lines (optimal for PDF)
+savefig.pad_inches : 0.01

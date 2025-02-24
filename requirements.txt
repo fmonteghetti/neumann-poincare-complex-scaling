@@ -1,0 +1,3 @@
+./fem
+matplotlib==3.9.*
+juliacall

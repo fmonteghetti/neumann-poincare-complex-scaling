@@ -1,0 +1,24 @@
+name = "ComputationalPlasmonics"
+uuid = "2a52226b-d884-4b12-8d4c-6ad7bbac7726"
+authors = ["Luiz M. Faria and Florian Monteghetti"]
+version = "0.1.0"
+
+[deps]
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+CairoMakie = "13f3f980-e62b-5c42-98c6-ff1f3baf88f0"
+ForwardDiff = "f6369f11-7733-5829-9624-2563aa707210"
+Gmsh = "705231aa-382f-11e9-3f0c-b7cb4346fdeb"
+HCubature = "19dc6840-f33b-545b-b366-655c7e3ffd49"
+Inti = "fb74042b-437e-4c5b-88cf-d4e2beb394d5"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Literate = "98b081ad-f1c9-55d3-8b20-4c87d4299306"
+Meshes = "eacbb407-ea5a-433e-ab97-5258b1ca43fa"
+Roots = "f2b01f46-fcfa-551c-844a-d8ac1e96c665"
+StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
+
+[sources]
+Inti = {rev = "bypass-adaptive", url = "https://github.com/IntegralEquations/Inti.jl"}
+
+[compat]
+Inti = "0.1.3"
+julia = "1.11"

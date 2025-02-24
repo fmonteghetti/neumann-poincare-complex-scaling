@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "computational_plasmonics"
+dynamic = ["version"]
+description = 'Finite element discretization of plasmonics problems.'
+readme = "README.md"
+requires-python = ">=3.9"
+license = "GPL-3.0-only"
+authors = [
+  { name = "Florian Monteghetti", email = "f.monteghetti@gmail.com" },
+]
+
+dependencies = [
+  'fenics-dolfinx<=0.6',
+  'matplotlib>=3.7',
+  'gmsh==4.9.0',
+  'scicomp_utils_dolfinx @ git+https://github.com/fmonteghetti/python-scientific-computing-utils/@b7adbef9d3d17dfc2aba00b7cbe7958a25d1895f#subdirectory=scicomp_utils_dolfinx'
+]
+
+[project.optional-dependencies]
+fenics = [
+  "fenics"
+]
+
+[tool.hatch]
+version.path = "src/computational_plasmonics/__init__.py"
+metadata.allow-direct-references = true

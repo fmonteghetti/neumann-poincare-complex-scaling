@@ -1,0 +1,27 @@
+{
+    "build": { 
+        "dockerfile": "Dockerfile.dolfinx-mpc-vscode",
+        "target": "complex",
+        "args": {
+            "DOLFINX_VERSION": "v0.6.1.post1",
+            "JULIA_URL": "https://julialang-s3.julialang.org/bin/linux/x64/1.11/julia-1.11.1-linux-x86_64.tar.gz",
+            "USER_NAME": "fenicsx",
+            "USER_UID": "1000",
+            "USER_GID": "1000"
+            }
+        },
+    "customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": ["ms-python.python",
+                           "ms-toolsai.jupyter",               
+                           "julialang.language-julia"]
+        }
+    },
+    "containerUser": "fenicsx",
+    // Run at the end of docker build
+    "postCreateCommand": "sh ${containerWorkspaceFolder}/.devcontainer/post_create_command.sh '${containerWorkspaceFolder}'",
+    // Run at container start (avoid commands that need internet)
+    "postStartCommand": "sh ${containerWorkspaceFolder}/.devcontainer/post_start_command.sh '${containerWorkspaceFolder}'"
+}

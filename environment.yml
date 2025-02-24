@@ -1,0 +1,23 @@
+name: article_np
+channels:
+  - conda-forge
+  - defaults
+dependencies: # pkg_name=version=build
+  - petsc=3.*=complex*
+  - petsc4py=3.19.*
+  - mpich=4.2.*
+  - fenics-dolfinx=0.6.0
+  - dolfinx_mpc=0.6.1
+  - libdolfinx_mpc=0.6.1
+  - pytest=8.2.*
+  - matplotlib=3.9.*
+  - scipy=1.14.*
+  - pyvista=0.44.*
+  - pillow=10.3.*
+  - numba
+  - pip=24.2
+  - hatchling=1.25.0
+  - editables=0.5
+  - pip:
+    - ./fem
+    - juliacall

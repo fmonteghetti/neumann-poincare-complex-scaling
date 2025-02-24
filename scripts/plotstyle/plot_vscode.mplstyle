@@ -1,0 +1,25 @@
+#######################################
+# VSCode-specific settings
+# --
+# Settings to view plots with default size. 
+#######################################
+font.size: 11
+    # 16:10 figure size (width, height) in inches
+figure.figsize: 7.68, 4.8
+figure.dpi : 96
+savefig.format: png
+savefig.pad_inches : 0.05
+    # Lines and marker in plots (pt)
+lines.linewidth : 1.5
+lines.markeredgewidth: 1.5
+lines.markersize: 6.0
+    # Thickness of axes lines (pt)
+axes.linewidth: 0.5
+    # Thickness of legend box edge (pt)
+patch.linewidth: 0.5
+    # Thickness of grid lines and ticks (pt)
+grid.linewidth : 0.5
+xtick.major.width: 0.5
+xtick.minor.width: 0.5
+ytick.major.width: 0.5
+ytick.minor.width: 0.5
