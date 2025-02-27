@@ -6,7 +6,7 @@ This repository contains the code producing the plots of:
 eigenvalues and complex resonances of the Neumann-Poincaré
 operator on domains with corners."
 Luiz M. Faria, Florian Monteghetti.
-TODO: link
+[preprint](https://hal.science/hal-04970403)
 
 # Description
 
