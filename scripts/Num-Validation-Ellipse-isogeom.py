@@ -65,6 +65,6 @@ for (i,N_error) in enumerate(N_error_l):
               label=f'$J=${N_error}, $\mathcal{{O}}(h^{{{p:2.2g}}})$')
 ax.set_xlabel(f'DoF / {int(min(dof_l)):d}')
 ax.set_ylabel(r'$\max_{1\leq{}j\leq{}J}\,|\lambda_j^h-\lambda_j^{\text{el}}|$')
-ax.set_title(f'BEM error, $P$={int(np.ceil((qorder+1)/2))}, ($a$,$b$)=({a},{b})')
+ax.set_title(f'BIE error, $P$={int(np.ceil((qorder+1)/2))}, ($a$,$b$)=({a},{b})')
 ax.legend()
 ax.grid(which='both')

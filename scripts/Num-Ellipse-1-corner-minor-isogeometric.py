@@ -94,7 +94,7 @@ for (i,alpha) in enumerate(alpha_l):
                 horizontalalignment='center',verticalalignment=valign,
             )
     ax.plot(np.real(eigval_bem_l[i]),np.imag(eigval_bem_l[i]),
-            label=f'BEM, $P$={qnumber}, DoF={dof_bem_l[i]}',linestyle='none',marker='x',
+            label=f'BIE, $P$={qnumber}, DoF={dof_bem_l[i]}',linestyle='none',marker='x',
             color='C1')
         # Set title in a text box
     title=r'$\arg(\alpha)=0$'
@@ -202,7 +202,7 @@ for (idx, corner_grading) in enumerate(corner_grading_regularity_l): # for each 
     ax.legend(loc='lower left')
     ax.set_title(f'{corner_grading_legend_l[idx]}\n'
                 +fr'Reference at {bem_ref.dof_l[0]:d}$\simeq${bem_ref.dof_l[0]/min(bem.dof_l):2.2g}$\,\times\,${min(bem.dof_l)} DoF')
-f.suptitle(fr'Isogeometric BEM error, minor axis perturbation: '
+f.suptitle(fr'Isogeometric BIE error, minor axis perturbation: '
             +f'($a$,$b$,$\phi$)$=$({a},{b},{phi/np.pi:2g}$\pi$).'
             +'\n'
             +fr'$P=${qnumber}, $\arg(\alpha)=\pi/${np.pi/np.angle(alpha):.2g}.'
@@ -259,7 +259,7 @@ for n, ax in enumerate(fig.axes):
     ax.set_ylim([-1.10*b,1.20*y_c])
     ax.set_aspect('equal')
 fig.colorbar(coll,ax=axs[:,1],label=r'$\Re(u_n)$')
-fig.suptitle(f'BEM eigenfunctions, minor axis perturbation: '
+fig.suptitle(f'BIE eigenfunctions, minor axis perturbation: '
              + f'($a$,$b$,$\phi={{{phi/np.pi:.2g}}}\pi$).'
              + f'\n'
              + f'$P=${qnumber}, DoF$=${dof}, '

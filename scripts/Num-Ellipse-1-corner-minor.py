@@ -113,7 +113,7 @@ for (i,alpha) in enumerate(alpha_l):
                 horizontalalignment='center',verticalalignment=valign,
             )
     ax.plot(np.real(eigval_bem_l[i]),np.imag(eigval_bem_l[i]),
-            label=f'BEM, $P=${qnumber}, DoF={dof_bem_l[i]}',
+            label=f'BIE, $P=${qnumber}, DoF={dof_bem_l[i]}',
             linestyle='none',marker='x', color='C1')
         # Set title in a text box
     title=r'$\arg(\alpha)=0$'
@@ -214,7 +214,7 @@ for (k,alpha) in enumerate(alpha_l):
     # ax.set_xticklabels(['1','2','3','4','5','','','',''],minor=True)
     ax.grid(which='both')
     ax.legend(loc='lower left')
-f.suptitle(f'BEM error, minor axis perturbation: '
+f.suptitle(f'BIE error, minor axis perturbation: '
            +f'($a$,$b$,$\phi$)=({a},{b},{phi/np.pi:2g}$\pi$).'
            +'\n'
            +f'$P$={qnumber}, '
@@ -278,7 +278,7 @@ for n, ax in enumerate(fig.axes):
     ax.set_ylim([-1.10*b,1.20*y_c])
     ax.set_aspect('equal')
 fig.colorbar(coll,ax=axs[:,1],label=r'$\Re(u_n)$')
-fig.suptitle(f'BEM eigenfunctions, minor axis perturbation: '
+fig.suptitle(f'BIE eigenfunctions, minor axis perturbation: '
              + f'($a$,$b$,$\phi={{{phi/np.pi:.2g}}}\pi$).'
              + '\n'
              + f'$P=${qnumber}, DoF$=${dof}, '

@@ -91,7 +91,7 @@ ax.set_prop_cycle(color=mpl.rcParams['axes.prop_cycle'].by_key()['color'][1:3])
 marker_l = [str(1),str(2)]
 for (i,offset) in enumerate([0.15,0.1]):
     ax.plot(np.real(eigval_bem_l[i]),np.imag(eigval_bem_l[i])+offset,
-            label=f'BEM, DoF={dof_bem_l[i]}', linestyle='none',marker=marker_l[i])
+            label=f'BIE, DoF={dof_bem_l[i]}', linestyle='none',marker=marker_l[i])
 marker_l = ['+','x']
 for (i,offset) in enumerate([-0.1,-0.15]):
     ax.plot(np.real(eigval_fem_l[i]),np.imag(eigval_fem_l[i])+offset,
@@ -192,7 +192,7 @@ for (i,N_error) in enumerate(N_error_l):
               label=f'$J=${N_error}, $\mathcal{{O}}(h^{{{-p:2.2g}}})$')
 ax.set_xlabel(f'DoF / {int(min(dof_l)):d}')
 ax.set_ylabel(r'$\max_{1\leq{}j\leq{}J}\,|\lambda_j^h-\lambda_j^{\text{el}}|\,/\,|\lambda_j^{\text{el}}|$')
-ax.set_title(f'BEM error, $P$={qnumber}, ($a$,$b$)=({a},{b})')
+ax.set_title(f'BIE error, $P$={qnumber}, ($a$,$b$)=({a},{b})')
 ax.legend(loc='best',ncols=1)
 ax.grid(which='both')
 ax.set_ylim([1e-9,1e-1])

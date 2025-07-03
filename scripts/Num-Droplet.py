@@ -92,7 +92,7 @@ for (i,alpha) in enumerate(alpha_l):
                 horizontalalignment='center',verticalalignment=valign,
             )
     ax.plot(np.real(eigval_bem_l[i]),np.imag(eigval_bem_l[i]),
-            label=f'BEM, $P$={qnumber}, DoF={dof_bem_l[i]}',linestyle='none',marker='x',
+            label=f'BIE, $P$={qnumber}, DoF={dof_bem_l[i]}',linestyle='none',marker='x',
             color='C1')
         # Set title in a text box
     title=r'$\arg(\alpha)=0$'
@@ -164,7 +164,7 @@ for n, ax in enumerate(fig.axes):
     ax.set_aspect('equal')
 # fig.colorbar(coll,ax=axs[:,1],label=r'$\Re(u_n)$')
 fig.colorbar(coll,ax=axs[-1],label=r'$\Re(u_n)$',ticks=[-1,0,1])
-fig.suptitle(f'BEM eigenfunctions, droplet. '
+fig.suptitle(f'BIE eigenfunctions, droplet. '
              + f'\n'
              + f'$P=${qnumber}, DoF$=${dof}, '
              + fr'$\arg(\alpha)=\pi/{{{np.pi/np.angle(alpha):.2g}}}$.')

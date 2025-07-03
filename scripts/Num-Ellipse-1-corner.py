@@ -128,7 +128,7 @@ for (i,alpha) in enumerate(alpha_l):
                 horizontalalignment='center',verticalalignment=valign,
             )
     ax.plot(np.real(eigval_bem_l[i]),np.imag(eigval_bem_l[i]),
-            label=f'BEM, $P=${qnumber}, DoF={dof_bem_l[i]}',
+            label=f'BIE, $P=${qnumber}, DoF={dof_bem_l[i]}',
             linestyle='none',marker='x', color='C1')
         # Set title in a text box
     title=r'$\arg(\alpha)=0$'
@@ -211,7 +211,7 @@ ax.plot(np.real(eigval_fem),np.imag(eigval_fem),color='C2',
             label=f'FEM mixed coords, DoF={dof_fem}',linestyle='none',
             marker='o',fillstyle='none')
 ax.plot(np.real(eigval_bem),np.imag(eigval_bem),
-            label=f'BEM, $P=${qnumber}, DoF={dof_bem}',linestyle='none',marker='x',
+            label=f'BIE, $P=${qnumber}, DoF={dof_bem}',linestyle='none',marker='x',
             fillstyle='none',color='C1')
         # Set title in a text box
 title = r'$\arg(\alpha)=\pi\,/\,$'+f'{np.pi/np.angle(alpha):.2g}' 
@@ -282,7 +282,7 @@ for n in range(0,N_track):
     ax.set_ylim([-1.10*b,1.10*b])
     ax.set_aspect('equal')
 fig.colorbar(coll,ax=axs[:,1],label=r'$\Re(u_n)$')
-fig.suptitle(f'BEM eigenfunctions, major axis perturbation: '
+fig.suptitle(f'BIE eigenfunctions, major axis perturbation: '
              + f'($a$,$b$,$\phi={{{phi/np.pi:.2g}}}\pi$).'
              + '\n'
              + f'$P=${qnumber}, DoF$=${dof}, '

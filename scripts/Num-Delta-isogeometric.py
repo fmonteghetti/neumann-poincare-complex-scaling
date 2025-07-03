@@ -97,7 +97,7 @@ for (i,alpha) in enumerate(alpha_l):
                 horizontalalignment='center',verticalalignment=valign,
             )
     ax.plot(np.real(eigval_bem_l[i]),np.imag(eigval_bem_l[i]),
-            label=f'BEM, $P=${qnumber}, DoF$=${dof_bem_l[i]}',linestyle='none',marker='x',
+            label=f'BIE, $P=${qnumber}, DoF$=${dof_bem_l[i]}',linestyle='none',marker='x',
             color='C1')
         # Set title in a text box
     title=r'$\arg(\alpha)=0$'
@@ -118,7 +118,7 @@ ax = axs.ravel()[0]
 handles, labels = ax.get_legend_handles_labels()
 ax.legend(handles=handles,loc='lower center',ncols=4)
     # Legend at figure level
-f.suptitle(f'BEM eigenfunctions, delta geometry: $\phi={{{phi_frac.numerator}}}\pi/{{{phi_frac.denominator}}}$.')
+f.suptitle(f'BIE eigenfunctions, delta geometry: $\phi={{{phi_frac.numerator}}}\pi/{{{phi_frac.denominator}}}$.')
 f.savefig(os.path.join(DIR_ARTICLE_IMG,'Num-Delta-Isogeo-Eigenvalues'))
 #%% Plot eigenfunctions associated with the first N_track eigenfunctions
 N_track = 3 # track the first N_track eigenvalues
@@ -167,7 +167,7 @@ for n, ax in enumerate(fig.axes):
     ax.set_ylim([-1.10,1.10])
     ax.set_aspect('equal')
 fig.colorbar(coll,ax=axs[-1],label=r'$\Re(u_n)$')
-fig.suptitle(f'BEM eigenfunctions, delta geometry: $\phi={{{phi_frac.numerator}}}\pi/{{{phi_frac.denominator}}}$.'
+fig.suptitle(f'BIE eigenfunctions, delta geometry: $\phi={{{phi_frac.numerator}}}\pi/{{{phi_frac.denominator}}}$.'
              + f'\n'
              + f'$P=${qnumber}, DoF$=${dof}, '
              + fr'$\arg(\alpha)=\pi/{{{np.pi/np.angle(alpha):.2g}}}$.')

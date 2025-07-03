@@ -88,7 +88,7 @@ for (i,alpha) in enumerate(alpha_l):
             linestyle='none',
             label=r'$\pm\,\lambda_c(\phi)$',marker='o',color='C0')
     ax.plot(np.real(eigval_bem_l[i]),np.imag(eigval_bem_l[i]),
-            label=f'BEM, $P$={qnumber}, DoF={dof_bem_l[i]}',
+            label=f'BIE, $P$={qnumber}, DoF={dof_bem_l[i]}',
                                     linestyle='none',marker='x', color='C1')
     ax.set_ylim([-0.3,0.3])
     ax.set_xlim([-0.3,0.3])
@@ -149,7 +149,7 @@ for (i,alpha) in enumerate(alpha_l):
                                     linestyle='none',marker='o', fillstyle='none',
                                     color='C2')
     ax.plot(np.real(eigval_bem_l[i]),np.imag(eigval_bem_l[i]),
-            label=f'BEM, $P$={qnumber}, DoF={dof_bem_l[i]}',
+            label=f'BIE, $P$={qnumber}, DoF={dof_bem_l[i]}',
                                     linestyle='none',marker='x', color='C1')
     ax.set_ylim([-0.3,0.3])
     ax.set_xlim([-0.3,0.3])
