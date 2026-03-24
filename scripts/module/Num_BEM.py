@@ -1,7 +1,12 @@
 #!/usr/bin/env python
 # coding: utf-8
 """
-Boundary element method for the Neumann-Poincaré (NP) operator. 
+Boundary element method for the Neumann-Poincaré (NP) operator.
+
+The discretization is done in Julia. As a result, this module should be
+imported as early as possible to avoid linking issues caused by a version
+mismatch between the shared libraries expected by the Julia code and those
+available in the python environment. 
 """
 import os
 from pathlib import Path

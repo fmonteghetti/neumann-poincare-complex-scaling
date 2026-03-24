@@ -21,8 +21,8 @@ import matplotlib.pyplot as plt
 import Num_utils
 from Num_utils import DIR_MESH, DIR_ARTICLE_IMG, \
                                       MPLSTYLE_ARTICLE, MPLSTYLE_VSCODE
-import Num_FEM
 import Num_BEM
+import Num_FEM
 from computational_plasmonics import eigv_analytical as PEP_ana
 
 def compute_error(eigval,eigval_ex,N=1):

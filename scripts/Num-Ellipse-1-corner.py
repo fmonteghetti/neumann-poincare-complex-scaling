@@ -21,8 +21,8 @@ from computational_plasmonics import eigv_analytical as PEP_ana
 import Num_utils
 from Num_utils import DIR_MESH, DIR_ARTICLE_IMG, \
                                       MPLSTYLE_ARTICLE, MPLSTYLE_VSCODE
-import Num_FEM
 import Num_BEM
+import Num_FEM
     # BEM parameters
 qorder = 3
 qnumber = int(np.ceil((qorder+1)/2))
