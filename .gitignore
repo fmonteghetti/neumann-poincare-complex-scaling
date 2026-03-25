@@ -165,3 +165,5 @@ cache
 # image files in scripts
 /scripts/*.pdf
 /scripts/*.png
+./*.pdf
+./*.png
