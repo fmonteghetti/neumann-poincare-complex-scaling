@@ -17,7 +17,7 @@ from computational_plasmonics_FEM import eigv_analytical as PEP_ana
 from np_complex_scaling import Num_utils
 from np_complex_scaling.Num_utils import DIR_ARTICLE_IMG, \
                                       MPLSTYLE_ARTICLE, MPLSTYLE_VSCODE
-DIR_MESH = 'mesh'
+DIR_MESH=os.path.join(Path(__file__).parent,'mesh')
 from dataclasses import dataclass
 from np_complex_scaling import Num_BEM
     # BEM Parameters
