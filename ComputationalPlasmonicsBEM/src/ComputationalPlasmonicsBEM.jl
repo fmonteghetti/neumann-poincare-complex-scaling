@@ -1,6 +1,6 @@
-module ComputationalPlasmonics
+module ComputationalPlasmonicsBEM
 
-const PROJECT_ROOT = pkgdir(ComputationalPlasmonics)
+const PROJECT_ROOT = pkgdir(ComputationalPlasmonicsBEM)
 
 using StaticArrays
 using LinearAlgebra
@@ -11,4 +11,4 @@ include("operators.jl")
 
 export CartesianPML, EulerPML, single_layer, adjoint_double_layer, solution, solution_full
 
-end # module ComputationalPlasmonics
+end # module ComputationalPlasmonicsBEM

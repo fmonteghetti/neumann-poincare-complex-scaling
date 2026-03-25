@@ -1,4 +1,4 @@
-name = "ComputationalPlasmonics"
+name = "ComputationalPlasmonicsBEM"
 uuid = "2a52226b-d884-4b12-8d4c-6ad7bbac7726"
 authors = ["Luiz M. Faria and Florian Monteghetti"]
 version = "0.1.0"
