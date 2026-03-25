@@ -20,5 +20,5 @@ dependencies: # pkg_name=version=build
   - hatchling=1.25.0
   - editables=0.5
   - pip:
-    - ./computational_plasmonics_FEM
-    - juliacall
+    - -e ./computational_plasmonics_FEM
+    - -e ./np_complex_scaling[dev]

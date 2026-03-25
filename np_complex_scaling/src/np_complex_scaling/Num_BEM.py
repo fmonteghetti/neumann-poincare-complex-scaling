@@ -15,7 +15,7 @@ import typing
 import warnings
 import numpy as np
 import scipy.sparse.linalg
-from Num_utils import DIR_JULIA_PKG, JULIA_LIBRARY
+from np_complex_scaling.Num_utils import DIR_JULIA_PKG, JULIA_LIBRARY
 # Setup julia environment
 import juliapkg as jlPkg
 jlPkg.require_julia("1.11")
@@ -30,6 +30,7 @@ jlPkg.add("ComputationalPlasmonicsBEM",
           path=DIR_JULIA_PKG,
           dev=True)
 # # Load julia library
+jlPkg.add("PythonCall")
 from juliacall import Main as jl
 jl.include(JULIA_LIBRARY)
 

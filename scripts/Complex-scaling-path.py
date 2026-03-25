@@ -11,8 +11,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 import matplotlib.patches
 from pathlib import Path
-sys.path.append(str(Path(__file__).parents[0]/'module'))
-from Num_utils import DIR_ARTICLE_IMG, \
+from np_complex_scaling.Num_utils import DIR_ARTICLE_IMG, \
                       MPLSTYLE_ARTICLE, MPLSTYLE_VSCODE
 
 def gamma(z,alpha=complex(1.0),z_alpha=0.0):

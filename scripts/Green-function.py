@@ -7,10 +7,7 @@ complex-scaled Green's function.
 import os
 import sys
 from pathlib import Path
-sys.path.append(str(Path(__file__).parents[0]/'module'))
-from Num_utils import DIR_ARTICLE_IMG, MPLSTYLE_ARTICLE, MPLSTYLE_VSCODE
-MPLSTYLE_BEAMER = [str(Path(__file__).parents[0]/'base.mplstyle'),
-                   str(Path(__file__).parents[0]/'beamer.mplstyle')]
+from np_complex_scaling.Num_utils import DIR_ARTICLE_IMG, MPLSTYLE_ARTICLE, MPLSTYLE_VSCODE, MPLSTYLE_BEAMER
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np

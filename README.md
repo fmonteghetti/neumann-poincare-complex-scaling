@@ -23,6 +23,8 @@ The work [1] introduces a complex-scaled boundary integral equation that enables
 
 `computational_plasmonics_FEM`: Python module implementing the discretization of the plasmonic eigenvalue problem using `fenicsx`.
 
+`np_complex_scaling`: Python module that relies on `ComputationalPlasmonicsBEM` and `computational_plasmonics_FEM` to discretize the Neumann-Poincaré operator and the plasmonic eigenvalue problem.
+
 `scripts`: Python scripts producing the plots of [1]. The Julia code is called using the `juliacall` package.
 
 # Usage

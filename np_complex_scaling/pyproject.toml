@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "np_complex_scaling"
+dynamic = ["version"]
+description = 'Discretization of Neumann-Poincaré operator with corner complex-scaling.'
+readme = "README.md"
+requires-python = ">=3.9"
+license = "GPL-3.0-only"
+authors = [
+  { name = "Florian Monteghetti", email = "f.monteghetti@gmail.com" },
+]
+
+dependencies = [
+  'numpy<2',
+  'scipy<2',
+  'numba',
+  'juliapkg',
+  'juliacall',
+  'matplotlib>=3.7',
+  'gmsh==4.9.0',
+  'computational_plasmonics_FEM', 
+  'scicomp_utils_dolfinx @ git+https://github.com/fmonteghetti/python-scientific-computing-utils/@b7adbef9d3d17dfc2aba00b7cbe7958a25d1895f#subdirectory=scicomp_utils_dolfinx'
+]
+
+[project.optional-dependencies]
+dev = [
+  "ruff>=0.6.3"
+]
+
+[tool.hatch]
+version.path = "src/np_complex_scaling/__init__.py"
+metadata.allow-direct-references = true

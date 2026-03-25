@@ -11,9 +11,9 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 from PIL import Image
 import numpy as np
-sys.path.append(str(Path(__file__).parents[0]/'module'))
-import Num_utils
-from Num_utils import DIR_ARTICLE_IMG, DIR_MESH, MPLSTYLE_ARTICLE
+import np_complex_scaling.Num_utils as Num_utils
+from np_complex_scaling.Num_utils import DIR_ARTICLE_IMG, MPLSTYLE_ARTICLE
+DIR_MESH=os.path.join(Path(__file__).parent,'mesh')
 try:
     from computational_plasmonics_FEM import eigv_analytical as PEP_ana
 except ImportError:

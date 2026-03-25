@@ -11,8 +11,7 @@ from numpy import pi
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 from pathlib import Path
-sys.path.append(str(Path(__file__).parents[0]/'module'))
-from Num_utils import DIR_ARTICLE_IMG, \
+from np_complex_scaling.Num_utils import DIR_ARTICLE_IMG, \
                                       MPLSTYLE_ARTICLE, MPLSTYLE_VSCODE
 
 # Corner geometry

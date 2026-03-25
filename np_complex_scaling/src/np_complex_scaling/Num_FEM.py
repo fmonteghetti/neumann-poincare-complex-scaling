@@ -12,7 +12,7 @@ from scicomp_utils_misc import SLEPc_utils
 from scicomp_utils_mesh import gmsh_utils
 from scicomp_utils_dolfinx import fenicsx_utils
 from computational_plasmonics_FEM import eigv_fenicsx as PEP_utils
-from Num_utils import kappa_2_lambda, lambda_2_kappa
+from np_complex_scaling.Num_utils import kappa_2_lambda, lambda_2_kappa
 import dolfinx
 import ufl
 from scicomp_utils_dolfinx import fenicsx_utils

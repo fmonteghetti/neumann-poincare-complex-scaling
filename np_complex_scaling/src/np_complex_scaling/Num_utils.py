@@ -14,18 +14,17 @@ try:
 except ImportError:
     warnings.warn("scicomp_utils_mesh not available.")
 # Define path
-    # Mesh
-DIR_MESH = str(Path(__file__).parents[1]/'mesh')
     # Image folder
 DIR_ARTICLE_IMG = str(Path(__file__).parents[1]) 
     # Matplotlib style
-DIR_MPLSTYLE = Path(__file__).parents[1]/'plotstyle'
-MPLSTYLE_ARTICLE = [str(DIR_MPLSTYLE/'plot_style.mplstyle'),
-                    str(DIR_MPLSTYLE/'plot_article_a4.mplstyle')]
-MPLSTYLE_VSCODE = [str(DIR_MPLSTYLE/'plot_style.mplstyle'),
-                   str(DIR_MPLSTYLE/'plot_vscode.mplstyle')]
+MPLSTYLE_ARTICLE = ['np_complex_scaling.styles.plot_style',
+                    'np_complex_scaling.styles.plot_article_a4']
+MPLSTYLE_VSCODE = ['np_complex_scaling.styles.plot_style',
+                   'np_complex_scaling.styles.plot_vscode']
+MPLSTYLE_BEAMER = ['np_complex_scaling.styles.plot_style',
+                   'np_complex_scaling.styles.beamer']
     # path to computational plasmonics package
-DIR_JULIA_PKG = str(Path(__file__).parents[2]/'ComputationalPlasmonicsBEM')
+DIR_JULIA_PKG = str(Path(__file__).parents[3]/'ComputationalPlasmonicsBEM')
 JULIA_LIBRARY = str(Path(__file__).parents[0]/'Num-Neumann-Poincare.jl')
 
 def kappa_2_lambda(kappa):
