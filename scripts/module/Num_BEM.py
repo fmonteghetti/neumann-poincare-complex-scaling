@@ -25,7 +25,7 @@ jlPkg.add("Inti", uuid="fb74042b-437e-4c5b-88cf-d4e2beb394d5",
           rev="bypass-adaptive",
           url="https://github.com/IntegralEquations/Inti.jl")
 jlPkg.add("Gmsh",uuid="705231aa-382f-11e9-3f0c-b7cb4346fdeb")
-jlPkg.add("ComputationalPlasmonics",
+jlPkg.add("ComputationalPlasmonicsBEM",
           uuid="2a52226b-d884-4b12-8d4c-6ad7bbac7726",
           path=DIR_JULIA_PKG,
           dev=True)

@@ -12,7 +12,7 @@ import warnings
 import os
 import fenics as fe
 from scicomp_utils_fenics import fenics_utils
-from computational_plasmonics import eigv_analytical as PEP_utils_ana
+from computational_plasmonics_FEM import eigv_analytical as PEP_utils_ana
 
 def assemble_PEP_no_PML(V, dmesh,
                         tags_omegaM, tags_omegaD, tags_Dirichlet,

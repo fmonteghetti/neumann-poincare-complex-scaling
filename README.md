@@ -17,12 +17,11 @@ The work [1] introduces a complex-scaled boundary integral equation that enables
 
 2. Discretizing the (quasi-static) plasmonic eigenvalue problem using a finite element method. This is done using the C++/python library `fenicsx`.
 
-
 # Content
 
-`bem`: Julia module implementing the Nyström method using `Inti.jl`. 
+`ComputationalPlasmonicsBEM`: Julia module implementing the Nyström method using `Inti.jl`. 
 
-`fem`: Python module implementing the discretization of the plasmonic eigenvalue problem using `fenicsx`.
+`computational_plasmonics_FEM`: Python module implementing the discretization of the plasmonic eigenvalue problem using `fenicsx`.
 
 `scripts`: Python scripts producing the plots of [1]. The Julia code is called using the `juliacall` package.
 

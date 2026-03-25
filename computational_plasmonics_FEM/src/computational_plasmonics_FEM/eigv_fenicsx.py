@@ -10,7 +10,7 @@ from petsc4py import PETSc
 from scicomp_utils_misc import SLEPc_utils
 import warnings
 import os
-from computational_plasmonics import eigv_analytical as PEP_utils_ana
+from computational_plasmonics_FEM import eigv_analytical as PEP_utils_ana
 
 try:
     import dolfinx

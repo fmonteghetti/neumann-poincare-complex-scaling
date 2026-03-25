@@ -12,7 +12,7 @@ sys.path.append(str(Path(__file__).parents[0]/'module'))
 import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-from computational_plasmonics import eigv_analytical as PEP_ana
+from computational_plasmonics_FEM import eigv_analytical as PEP_ana
 import Num_utils
 from Num_utils import DIR_ARTICLE_IMG, \
                                       MPLSTYLE_ARTICLE, MPLSTYLE_VSCODE

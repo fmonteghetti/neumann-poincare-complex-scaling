@@ -15,9 +15,9 @@ sys.path.append(str(Path(__file__).parents[0]/'module'))
 import Num_utils
 from Num_utils import DIR_ARTICLE_IMG, DIR_MESH, MPLSTYLE_ARTICLE
 try:
-    from computational_plasmonics import eigv_analytical as PEP_ana
+    from computational_plasmonics_FEM import eigv_analytical as PEP_ana
 except ImportError:
-    warnings.warn("computational_plasmonics.eigv_analytical not available.")
+    warnings.warn("computational_plasmonics_FEM.eigv_analytical not available.")
 #%% Ellipse
 a_m, b_m = 2.5, 1.0 # sign-changing interface
 R_DtN = 4 # radius of DtN boundary

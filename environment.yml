@@ -20,5 +20,5 @@ dependencies: # pkg_name=version=build
   - hatchling=1.25.0
   - editables=0.5
   - pip:
-    - ./fem
+    - ./computational_plasmonics_FEM
     - juliacall

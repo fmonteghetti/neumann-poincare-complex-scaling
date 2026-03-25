@@ -25,7 +25,7 @@ MPLSTYLE_ARTICLE = [str(DIR_MPLSTYLE/'plot_style.mplstyle'),
 MPLSTYLE_VSCODE = [str(DIR_MPLSTYLE/'plot_style.mplstyle'),
                    str(DIR_MPLSTYLE/'plot_vscode.mplstyle')]
     # path to computational plasmonics package
-DIR_JULIA_PKG = str(Path(__file__).parents[2]/'bem')
+DIR_JULIA_PKG = str(Path(__file__).parents[2]/'ComputationalPlasmonicsBEM')
 JULIA_LIBRARY = str(Path(__file__).parents[0]/'Num-Neumann-Poincare.jl')
 
 def kappa_2_lambda(kappa):
