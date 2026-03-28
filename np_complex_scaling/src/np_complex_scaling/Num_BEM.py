@@ -16,31 +16,8 @@ import typing
 import warnings
 import numpy as np
 import scipy.sparse.linalg
-from np_complex_scaling.Num_utils import DIR_JULIA_PKG, JULIA_LIBRARY
-
-# Setup julia environment
-import juliapkg as jlPkg
-
-jlPkg.require_julia("1.11")
-jlPkg.add("LinearAlgebra", uuid="37e2e46d-f89d-539d-b4ee-838fcccc9c8e")
-jlPkg.add("StaticArrays", uuid="90137ffa-7385-5640-81b9-e52037218182")
-jlPkg.add(
-    "Inti",
-    uuid="fb74042b-437e-4c5b-88cf-d4e2beb394d5",
-    rev="bypass-adaptive",
-    url="https://github.com/IntegralEquations/Inti.jl",
-)
-jlPkg.add("Gmsh", uuid="705231aa-382f-11e9-3f0c-b7cb4346fdeb")
-jlPkg.add(
-    "ComputationalPlasmonicsBEM",
-    uuid="2a52226b-d884-4b12-8d4c-6ad7bbac7726",
-    path=DIR_JULIA_PKG,
-    dev=True,
-)
-# # Load julia library
-jlPkg.add("PythonCall")
+from np_complex_scaling.Num_utils import JULIA_LIBRARY
 from juliacall import Main as jl
-
 jl.include(JULIA_LIBRARY)
 
 

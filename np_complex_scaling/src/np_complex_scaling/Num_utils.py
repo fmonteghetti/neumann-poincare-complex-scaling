@@ -31,8 +31,7 @@ MPLSTYLE_BEAMER = [
     "np_complex_scaling.styles.plot_style",
     "np_complex_scaling.styles.beamer",
 ]
-# path to computational plasmonics package
-DIR_JULIA_PKG = str(Path(__file__).parents[3] / "ComputationalPlasmonicsBEM")
+# path to Julia code
 JULIA_LIBRARY = str(Path(__file__).parents[0] / "Num-Neumann-Poincare.jl")
 
 
