@@ -2,7 +2,6 @@
 Functions to assemble the Neumann-Poincaré operator and single layer potential.
 =#
 using LinearAlgebra
-using ComputationalPlasmonicsBEM
 using StaticArrays
 using Inti
 using Gmsh

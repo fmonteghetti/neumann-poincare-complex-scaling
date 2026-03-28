@@ -18,6 +18,7 @@ dependencies: # pkg_name=version=build
   - pip=24.2
   - setuptools=81.*
   - ipython
+  - ipykernel
   - hatchling=1.25.0
   - editables=0.5
   - pip:

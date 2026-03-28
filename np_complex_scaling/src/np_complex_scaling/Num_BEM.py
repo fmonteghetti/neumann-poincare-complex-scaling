@@ -16,9 +16,8 @@ import typing
 import warnings
 import numpy as np
 import scipy.sparse.linalg
-from np_complex_scaling.Num_utils import JULIA_LIBRARY
 from juliacall import Main as jl
-jl.include(JULIA_LIBRARY)
+jl.seval("using ComputationalPlasmonicsBEM")
 
 
 @dataclasses.dataclass
@@ -39,7 +38,7 @@ def compute_NP_eigenvalues(
     gmshfile: str, opts_eigv: EigenvalueSolverOpts, **kwargs_julia
 ):
     """Compute eigenvalues of (complex-scaled) NP operator."""
-    K, sl_pot = jl.compute_NP(gmshfile, "omega-m", **kwargs_julia)
+    K, sl_pot = jl.ComputationalPlasmonicsBEM.compute_NP(gmshfile, "omega-m", **kwargs_julia)
     K = np.array(K)
     (eigvals, eigvecs) = compute_eigenvalues(K, opts_eigv)
     return (eigvals, K.shape[0], eigvecs, sl_pot)
@@ -50,7 +49,7 @@ def compute_NP_eigenvalues_corner(
 ):
     """Compute eigenvalues of NP operator for a corner with Dirichlet boundary
     condition."""
-    K = jl.compute_NP_corner(gmshfile, **kwargs_julia)
+    K = jl.ComputationalPlasmonicsBEM.compute_NP_corner(gmshfile, **kwargs_julia)
     K = np.array(K)
     (eigvals, _) = compute_eigenvalues(K, opts_eigv)
     return (eigvals, K.shape[0])
@@ -69,7 +68,7 @@ def compute_NP_eigenvalues_ellipse_with_corner_isogeometric(
     """Compute some eigenvalues of the NP for an ellipse perturbed by one
     corner. The geometry is represented exactly.
     """
-    K, sl_pot = jl.compute_NP_ellipse_with_corner_isogeometric(
+    K, sl_pot = jl.ComputationalPlasmonicsBEM.compute_NP_ellipse_with_corner_isogeometric(
         a, b, xc, yc, cor_jun1_theta, cor_jun2_theta, **kwargs_julia
     )
     K = np.array(K)
@@ -85,7 +84,7 @@ def compute_NP_eigenvalues_droplet_isogeometric(
     ensure conformity.
     """
     phi = 2 * np.pi / 3
-    K, sl_pot, pml_radius = jl.compute_NP_droplet_isogeometric(**kwargs_julia)
+    K, sl_pot, pml_radius = jl.ComputationalPlasmonicsBEM.compute_NP_droplet_isogeometric(**kwargs_julia)
     K = np.array(K)
     (eigval, eigvecs) = compute_eigenvalues(K, opts_eigv)
     return (eigval, K.shape[0], phi, eigvecs, sl_pot, pml_radius)
@@ -98,7 +97,7 @@ def compute_NP_eigenvalues_delta_isogeometric(
     The geometry is represented exactly. The given PML radius is adjusted
     to ensure conformity.
     """
-    K, sl_pot, pml_radius = jl.compute_NP_delta_isogeometric(
+    K, sl_pot, pml_radius = jl.ComputationalPlasmonicsBEM.compute_NP_delta_isogeometric(
         phi, **kwargs_julia
     )
     K = np.array(K)
@@ -112,7 +111,7 @@ def compute_NP_eigenvalues_ellipse_isogeometric(
     """Compute some eigenvalues of the NP for an ellipse. The geometry is
     represented exactly.
     """
-    K = jl.compute_NP_ellipse_isogeometric(a, b, **kwargs_julia)[0]
+    K = jl.ComputationalPlasmonicsBEM.compute_NP_ellipse_isogeometric(a, b, **kwargs_julia)[0]
     K = np.array(K)
     (eigvals, _) = compute_eigenvalues(K, opts_eigv)
     return (eigvals, K.shape[0])

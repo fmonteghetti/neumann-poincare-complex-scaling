@@ -31,9 +31,6 @@ MPLSTYLE_BEAMER = [
     "np_complex_scaling.styles.plot_style",
     "np_complex_scaling.styles.beamer",
 ]
-# path to Julia code
-JULIA_LIBRARY = str(Path(__file__).parents[0] / "Num-Neumann-Poincare.jl")
-
 
 def kappa_2_lambda(kappa):
     return 0.5 * (kappa + 1) / (kappa - 1)

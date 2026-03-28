@@ -1,28 +1,17 @@
 {
     "julia": "^1.11",
     "packages": {
-        "LinearAlgebra": {
-            "uuid": "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
-        },
-        "StaticArrays": {
-            "uuid": "90137ffa-7385-5640-81b9-e52037218182"
-        },
         "Inti": {
             "uuid": "fb74042b-437e-4c5b-88cf-d4e2beb394d5",
             "rev": "bypass-adaptive",
+            "version": "0.1.3",
             "url": "https://github.com/IntegralEquations/Inti.jl"
-        },
-        "Gmsh": {
-            "uuid": "705231aa-382f-11e9-3f0c-b7cb4346fdeb"
         },
         "ComputationalPlasmonicsBEM": {
             "uuid": "2a52226b-d884-4b12-8d4c-6ad7bbac7726",
             "dev": true,
             "version": "0.1.0",
             "path": "../../../ComputationalPlasmonicsBEM"
-        },
-        "PythonCall": {
-            "uuid": "6099a3de-0909-46bc-b1f4-468b9a2dfc0d"
         }
     }
 }
