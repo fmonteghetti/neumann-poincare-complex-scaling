@@ -1,3 +1,4 @@
-./fem
+./computational_plasmonics_FEM
+./np_complex_scaling
 matplotlib==3.9.*
 juliacall
